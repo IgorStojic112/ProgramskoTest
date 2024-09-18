@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Detalji o nastambi: {{ nastamba.ime }}</h2>
+<p><strong>Vrsta:</strong> {{ nastamba.vrsta }}</p>
+<p><strong>Centralna točka:</strong> ({{ nastamba.centralna_tocka_lat }}, {{ nastamba.centralna_tocka_lng }})</p>
+<p><strong>Opis:</strong> {{ nastamba.opis }}</p>
+<p><strong>Biljke:</strong> {{ nastamba.biljke }}</p>
+<p><strong>Stabla:</strong> {{ nastamba.stabla }}</p>
+<p><strong>Sekundarne životinje:</strong> {{ nastamba.sekundarne_zivotinje }}</p>
+<p><strong>Evidencija prisutnosti:</strong> {{ nastamba.evidencija_prisutnosti }}</p>
+<a href="{% url 'nastamba_update' nastamba.id %}">Uredi</a>
+<a href="{% url 'nastamba_list' %}">Natrag na popis nastambi</a>
+{% endblock %}

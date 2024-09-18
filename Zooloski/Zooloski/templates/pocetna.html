@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Početna Stranica Zoološkog Vrta</title>
+</head>
+<body>
+    <h1>Dobrodošli u Zoološki Vrt!</h1>
+    <p>Ovdje ćete pronaći informacije o životinjama, nastambama, radnicima i svim ostalim važnim informacijama vezanim uz naš zoološki vrt.</p>
+    <ul>
+        <li><a href="{% url 'nastamba_list' %}">Popis Nastambi</a></li>
+        <li><a href="{% url 'animal_list' %}">Popis Životinja</a></li>
+        <li><a href="{% url 'worker_list' %}">Popis Radnika</a></li>
+    </ul>
+</body>
+</html>

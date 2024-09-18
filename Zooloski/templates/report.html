@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista Korisnika</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous"></head>
+<body>
+<div class="container mt-5">
+    <h2>Izvjestaj Zivotinja</h2>
+    <a class="btn btn-danger" href="" >Main page</a>
+
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+        <tr>
+            <th>Ukupno</th>
+            <th>ime zivotinje</th>
+            <th>Trosak po jednoj Zivotinji</th>
+            <th>Kolicina</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for item in combined_data %}
+        <tr >
+            <td >{% for broj in item.Ukupno %}
+                {{ broj.suma }}$
+            {% endfor %}</td>
+            <td >{{ item.zivotinja }}</td>
+            <td >{% for trosak in item.trosak_entries %}
+                {{ trosak.kolicina }}$
+            {% endfor %}</td>
+			<td >{{ item.zivotinja_kolicina}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Nastambe{% endblock %}
+
+{% block content %}
+    <h2>Popis Nastambi</h2>
+    <ul>
+        {% for nastamba in nastambe %}
+            <li>
+                <a href="{% url 'nastamba_detail' nastamba.id %}">
+                    {{ nastamba.vrsta }} - {{ nastamba.ime }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
